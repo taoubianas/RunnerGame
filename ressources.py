@@ -1,17 +1,17 @@
 import pygame
 class ressources:
     runImages = []
-    jampImages=[]
-    def __init__(self, scal=1):
+    jumpImages=[]
+    def __init__(self, scal=0.7):
         for i in range(8):
-            self.runImages.append(pygame.image.load("Run ("+ str(i+1) + ").png"))
+            self.runImages.append(pygame.image.load("images/Run ("+ str(i+1) + ").png"))
             size= self.runImages[i].get_size()
             self.runImages[i]= pygame.transform.scale(self.runImages[i],  (size[0]*scal, size[1]* scal))
 
-        for i in range(8):
-            self.jampImages.append(pygame.image.load("Jump ("+ str(i+1) + ").png"))
-            size= self.jampImages[i].get_size()
-            self.jampImages[i]= pygame.transform.scale(self.jampImages[i],  (size[0]*scal, size[1]* scal))
+        for i in range(10):
+            self.jumpImages.append(pygame.image.load("images/Jump ("+ str(i+1) + ").png"))
+            size= self.jumpImages[i].get_size()
+            self.jumpImages[i]= pygame.transform.scale(self.jumpImages[i],  (size[0]*scal, size[1]* scal))
 
 
 
